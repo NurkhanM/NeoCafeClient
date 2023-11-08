@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/SplashFragment">
+
+    <fragment
+        android:id="@+id/SplashFragment"
+        android:name="nur.xan.neocafe.clientneocafe.uiClient.splash.SplashFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/action_SplashFragment_to_AuthFragment"
+            app:destination="@id/AuthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AuthFragment"
+        android:name="nur.xan.neocafe.clientneocafe.uiClient.auth.AuthFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_auth"/>
+</navigation>

@@ -10,14 +10,79 @@
         android:name="nur.xan.neocafe.clientneocafe.uiClient.splash.SplashFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_splash">
-
         <action
-            android:id="@+id/action_SplashFragment_to_AuthFragment"
-            app:destination="@id/AuthFragment" />
+            android:id="@+id/action_SplashFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:popUpTo="@id/SplashFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/AuthFragment"
-        android:name="nur.xan.neocafe.clientneocafe.uiClient.auth.AuthFragment"
+        android:name="nur.xan.neocafe.clientneocafe.uiClient.auth.sign_in.AuthFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_auth"/>
+        tools:layout="@layout/fragment_auth">
+        <action
+            android:id="@+id/action_AuthFragment_to_confirmFragment"
+            app:destination="@id/confirmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="nur.xan.neocafe.clientneocafe.uiClient.auth.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_AuthFragment"
+            app:destination="@id/AuthFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_oneRegisterFragment"
+            app:destination="@id/oneRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmFragment"
+        android:name="nur.xan.neocafe.clientneocafe.uiClient.auth.sign_in.ConfirmFragment"
+        android:label="fragment_confirm"
+        tools:layout="@layout/fragment_confirm" />
+    <fragment
+        android:id="@+id/oneRegisterFragment"
+        android:name="nur.xan.neocafe.clientneocafe.uiClient.auth.sign_up.OneRegisterFragment"
+        android:label="fragment_one_register"
+        tools:layout="@layout/fragment_one_register" >
+        <action
+            android:id="@+id/action_oneRegisterFragment_to_twoRegisterFragment"
+            app:destination="@id/twoRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/twoRegisterFragment"
+        android:name="nur.xan.neocafe.clientneocafe.uiClient.auth.sign_up.TwoRegisterFragment"
+        android:label="fragment_two_register"
+        tools:layout="@layout/fragment_two_register" >
+        <action
+            android:id="@+id/action_twoRegisterFragment_to_confirmRegisterFragment"
+            app:destination="@id/confirmRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmRegisterFragment"
+        android:name="nur.xan.neocafe.clientneocafe.uiClient.auth.sign_up.ConfirmRegisterFragment"
+        android:label="fragment_confirm_register"
+        tools:layout="@layout/fragment_confirm_register" />
+    <fragment
+        android:id="@+id/basketFragment"
+        android:name="nur.xan.neocafe.clientneocafe.uiClient.basket.BasketFragment"
+        android:label="fragment_basket"
+        tools:layout="@layout/fragment_basket" />
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="nur.xan.neocafe.clientneocafe.uiClient.location.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="nur.xan.neocafe.clientneocafe.uiClient.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="nur.xan.neocafe.clientneocafe.uiClient.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
 </navigation>

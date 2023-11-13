@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".uiClient.auth.sign_in.AuthFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".uiClient.auth.sign_up.TwoRegisterFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/toolbar"
@@ -52,6 +52,8 @@
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linear1">
@@ -59,11 +61,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Вход"
+            android:text="Регистрация"
             android:textColor="@color/black"
             android:textSize="45sp"
             android:textStyle="bold" />
+
     </LinearLayout>
 
 
@@ -72,33 +74,56 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginHorizontal="20dp"
+        android:paddingHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/button_background"
-        android:gravity="center"
-        android:orientation="vertical"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/line1">
 
-        <com.github.vardemin.materialcountrypicker.PhoneNumberEditText
-            android:id="@+id/authEditPhone"
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_person"/>
+
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            app:cp_autoDetectCountry="true"
-            android:textSize="20sp"
-            app:cp_fastScrollerBubbleColor="@color/colorPrimary"
-            app:cp_fastScrollerHandleColor="@color/base"
-            app:cp_fullScreenToolbarColor="@color/red"
-            app:cp_listItemTextColor="@color/base"
-            app:cp_preferredCountries="us,ru,am"
-            app:cp_rememberLastSelection="true"
-            app:cp_setCountryCodeBorder="true"
-            android:background="@null"
-            app:cp_showCountryCodeInView="true"
-            app:cp_showCountryDialCodeInView="true"
-            app:cp_showFastScroll="true"
-            app:cp_showFullScreeDialog="true" />
+            android:paddingStart="10dp"
+            android:hint="Имя"
+            android:background="@null"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="20dp"
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_background"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line2">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_phone"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:inputType="numberDecimal"
+            android:hint="Номер телефона"
+            android:background="@null"/>
+
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
@@ -113,7 +138,6 @@
         app:cornerRadius="@dimen/all_radius"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/line2" />
-
+        app:layout_constraintTop_toBottomOf="@+id/line3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

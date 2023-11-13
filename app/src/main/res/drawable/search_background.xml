@@ -1,0 +1,12 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid
+        android:color="@color/search_background"/>
+    <corners
+        android:topRightRadius="@dimen/search_radius"
+        android:topLeftRadius="@dimen/search_radius"
+        android:bottomRightRadius="@dimen/search_radius"
+        android:bottomLeftRadius="@dimen/search_radius"/>
+
+</shape>

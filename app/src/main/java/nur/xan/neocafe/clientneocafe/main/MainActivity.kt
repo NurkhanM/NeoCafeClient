@@ -16,9 +16,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import nur.xan.neocafe.clientneocafe.R
 import nur.xan.neocafe.clientneocafe.databinding.ActivityMainBinding
 
+// part test
+
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         WindowCompat.setDecorFitsSystemWindows(window, false)

@@ -52,11 +52,13 @@
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linear1">
 
         <TextView
+            android:id="@+id/titleText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -64,6 +66,19 @@
             android:textColor="@color/black"
             android:textSize="45sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textHelper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:text="@string/error_number"
+            android:textColor="@color/red_error"
+            android:textSize="16sp" />
+
+
     </LinearLayout>
 
 
@@ -107,7 +122,8 @@
         android:layout_height="70dp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="@color/base"
+        android:backgroundTint="@color/gray"
+        android:enabled="false"
         android:text="Получить код"
         android:textSize="18sp"
         app:cornerRadius="@dimen/all_radius"

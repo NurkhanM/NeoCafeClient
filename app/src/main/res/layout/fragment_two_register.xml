@@ -89,6 +89,7 @@
             android:src="@drawable/ic_person"/>
 
         <EditText
+            android:id="@+id/edtName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingStart="10dp"
@@ -117,10 +118,11 @@
             android:src="@drawable/ic_phone"/>
 
         <EditText
+            android:id="@+id/edtPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingStart="10dp"
-            android:inputType="numberDecimal"
+            android:inputType="phone"
             android:hint="Номер телефона"
             android:background="@null"/>
 

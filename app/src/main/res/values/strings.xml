@@ -2,6 +2,13 @@
     <string name="app_name">ClientNeoCafe</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="fill_all_fields">Заполните все поля</string>
+    <string name="email_or_phone">Номер телефона</string>
+    <string name="enter_email_correctly">Введите номер телефона правильно</string>
+    <string name="enter_postal_address">Введите номер телефона</string>
+
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
@@ -15,4 +22,7 @@
     <string name="sign_in">Войти</string>
     <string name="sign_up">Регистрация</string>
     <string name="vvedite_4_cod">Введите 4-х значный код, \nотправленный на номер 0552 321 123</string>
+    <string name="error_number">Номер телефона введён неверно, \nпопробуйте еще раз</string>
+    <string name="send_again">Отправить еще раз</string>
+
 </resources>

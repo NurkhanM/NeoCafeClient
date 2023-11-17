@@ -7,9 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.DatePicker
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import nur.xan.neocafe.clientneocafe.R
 import nur.xan.neocafe.clientneocafe.databinding.FragmentOneRegisterBinding
+import nur.xan.neocafe.clientneocafe.`object`.FullRegistr.CLIENT_BIRTHDAY
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -24,6 +26,7 @@ class OneRegisterFragment : Fragment(),  DatePickerDialog.OnDateSetListener {
 
     private val calendar = Calendar.getInstance()
     private val formatterBirthday = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+    private val formatterBirthday2 = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
 
     private var _binding: FragmentOneRegisterBinding? = null
 
@@ -44,7 +47,13 @@ class OneRegisterFragment : Fragment(),  DatePickerDialog.OnDateSetListener {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnNext.setOnClickListener {
-            findNavController().navigate(R.id.action_oneRegisterFragment_to_twoRegisterFragment)
+            if (binding.editDateBirthday.text.isNotEmpty()){
+                findNavController().navigate(R.id.action_oneRegisterFragment_to_twoRegisterFragment)
+            }else{
+                Toast.makeText(requireContext(), resources.getString(R.string.fill_all_fields), Toast.LENGTH_SHORT)
+                    .show()
+            }
+
         }
 
         binding.btnBack.setOnClickListener {
@@ -85,5 +94,6 @@ class OneRegisterFragment : Fragment(),  DatePickerDialog.OnDateSetListener {
 
     private fun displayFormattedDate(timeInMillis: Long) {
         binding.editDateBirthday.setText(formatterBirthday.format(timeInMillis))
+        CLIENT_BIRTHDAY = formatterBirthday2.format(timeInMillis)
     }
 }

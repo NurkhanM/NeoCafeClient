@@ -15,6 +15,11 @@
             app:destination="@id/welcomeFragment"
             app:popUpTo="@id/SplashFragment"
             app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_SplashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/SplashFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/AuthFragment"
@@ -41,7 +46,13 @@
         android:id="@+id/confirmFragment"
         android:name="nur.xan.neocafe.clientneocafe.uiClient.auth.sign_in.ConfirmFragment"
         android:label="fragment_confirm"
-        tools:layout="@layout/fragment_confirm" />
+        tools:layout="@layout/fragment_confirm" >
+        <action
+            android:id="@+id/action_confirmFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/confirmFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
     <fragment
         android:id="@+id/oneRegisterFragment"
         android:name="nur.xan.neocafe.clientneocafe.uiClient.auth.sign_up.OneRegisterFragment"
@@ -64,7 +75,13 @@
         android:id="@+id/confirmRegisterFragment"
         android:name="nur.xan.neocafe.clientneocafe.uiClient.auth.sign_up.ConfirmRegisterFragment"
         android:label="fragment_confirm_register"
-        tools:layout="@layout/fragment_confirm_register" />
+        tools:layout="@layout/fragment_confirm_register" >
+        <action
+            android:id="@+id/action_confirmRegisterFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/confirmRegisterFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
     <fragment
         android:id="@+id/basketFragment"
         android:name="nur.xan.neocafe.clientneocafe.uiClient.basket.BasketFragment"

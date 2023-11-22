@@ -1,4 +1,4 @@
-package nur.xan.neocafe.clientneocafe.viewModels
+package nur.xan.neocafe.clientneocafe.viewModels.authVM
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -9,11 +9,11 @@ import com.google.gson.JsonObject
 import kotlinx.coroutines.launch
 import nur.xan.neocafe.clientneocafe.models.authModels.AuthSignUpModels
 import nur.xan.neocafe.clientneocafe.models.sendCodeRegistrationModels.SendCodeRegistrationModels
-import nur.xan.neocafe.clientneocafe.repository.Repository
+import nur.xan.neocafe.clientneocafe.repository.auth.AuthRepository
 import retrofit2.Response
 
-class BaseViewModels : ViewModel() {
-    private val repo = Repository()
+class AuthViewModels : ViewModel() {
+    private val repo = AuthRepository()
 
 
     private val _myPostAllSignIn = MutableLiveData<JsonObject>()
